@@ -1,0 +1,33 @@
+<Xdmf>
+  <Domain>
+    <Grid>
+      <Geometry>
+	<DataItem
+	    Dimensions="9"
+	    Function="$0; 2 * $1; 3 * $2"
+	    ItemType="Function">
+	  <DataItem
+	      Dimensions="3">
+	    1 0 0
+	  </DataItem>
+	  <DataItem
+	      Dimensions="3">
+	    0 1 0
+	  </DataItem>
+	  <DataItem
+	      Dimensions="3">
+	    0 0 1
+	  </DataItem>
+	</DataItem>
+      </Geometry>
+      <Topology
+	  Type="Triangle"
+	  NumberOfElements="1">
+	<DataItem
+	    Dimensions="3">
+	  0 1 2
+	</DataItem>
+      </Topology>
+    </Grid>
+  </Domain>
+</Xdmf>

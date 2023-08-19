@@ -1,0 +1,40 @@
+<Xdmf>
+  <Domain>
+    <Grid>
+      <Geometry>
+	<DataItem
+	    Dimensions="4 3">
+	  0 0 0
+	  1 0 0
+	  0 1 0
+	  0 0 1	  
+	</DataItem>
+      </Geometry>
+      <Topology
+	  Type="Polyvertex"
+	  NumberOfElements="4">
+	<DataItem
+	    Dimensions="4">
+	  0
+	  1
+	  2
+	  3
+	</DataItem>
+      </Topology>
+      <Attribute>
+	<DataItem
+	    Dimensions="4"
+	    Function="10*$0"
+	    ItemType="Function">
+	  <DataItem
+	      Dimensions="4">
+	    0
+	    1
+	    2
+	    3
+	  </DataItem>
+	</DataItem>	
+      </Attribute>
+    </Grid>
+  </Domain>
+</Xdmf>

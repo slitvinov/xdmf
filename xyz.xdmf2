@@ -1,23 +1,24 @@
 <Xdmf>
   <Domain>
     <Grid>
-      <Geometry
-	  Type="XYZ">
+      <Geometry>
 	<DataItem
-	    Dimensions="9">
+	    Dimensions="4 3">
 	  0 0 0
 	  1 0 0
 	  0 1 0
+	  0 0 1	  
 	</DataItem>
       </Geometry>
       <Topology
 	  Type="Polyvertex"
-	  NumberOfElements="3">
+	  NumberOfElements="4">
 	<DataItem
-	    Dimensions="3">
+	    Dimensions="4">
 	  0
 	  1
 	  2
+	  3
 	</DataItem>
       </Topology>
     </Grid>
