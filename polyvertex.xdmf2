@@ -1,11 +1,14 @@
-<Xdmf>
+<Xdmf
+    Version="2">
   <Domain>
     <Grid>
       <Topology
 	  TopologyType="Polyvertex"
 	  Dimensions="4">
 	<DataItem
-	    Dimensions="4">
+	    Dimensions="4 1"
+	    NumberType="Int"
+	    Format="XML">
 	  0
 	  1
 	  2
@@ -14,7 +17,8 @@
       </Topology>
       <Geometry>
 	<DataItem
-	    Dimensions="4 3">
+	    Dimensions="4 3"
+	    Format="XML">
 	  0 0 0
 	  1 0 0
 	  0 1 0
