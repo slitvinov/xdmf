@@ -53,6 +53,7 @@
 	Reference CDATA #IMPLIED
         Endian (Big | Little | Native) "Native"
 	Format (XML | HDF | Binary | TIFF) "XML"
+        Function CDATA #IMPLIED
 >
 <!--Describes the values on the mesh-->
 <!ELEMENT Attribute (Information*, DataItem*)>

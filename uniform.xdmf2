@@ -1,8 +1,11 @@
 <Xdmf>
   <Domain>
     <Grid>
+      <Topology
+	  TopologyType="3DCoRectMesh"
+	  Dimensions="2 3 4"/>
       <Geometry
-	  Type="ORIGIN_DXDYDZ">
+	  GeometryType="ORIGIN_DXDYDZ">
 	<DataItem
 	    Dimensions="3">
 	  10
@@ -16,9 +19,6 @@
 	  2
 	</DataItem>
       </Geometry>
-      <Topology
-	  Type="3DCORECTMesh"
-	  NumberOfElements="2 3 4"/>
     </Grid>
   </Domain>
 </Xdmf>

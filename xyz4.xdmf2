@@ -1,6 +1,14 @@
 <Xdmf>
   <Domain>
     <Grid>
+      <Topology
+	  TopologyType="Triangle"
+	  Dimensions="1">
+	<DataItem
+	    Dimensions="3">
+	  0 1 2
+	</DataItem>
+      </Topology>
       <Geometry>
 	<DataItem
 	    Dimensions="9"
@@ -20,14 +28,6 @@
 	  </DataItem>
 	</DataItem>
       </Geometry>
-      <Topology
-	  Type="Triangle"
-	  NumberOfElements="1">
-	<DataItem
-	    Dimensions="3">
-	  0 1 2
-	</DataItem>
-      </Topology>
     </Grid>
   </Domain>
 </Xdmf>
