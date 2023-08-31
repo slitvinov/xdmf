@@ -1,0 +1,19 @@
+<Xdmf
+    Version="2">
+  <Domain>
+    <Grid>
+      <Topology
+	  TopologyType="Polyvertex"/>
+      <Geometry>
+	<DataItem
+	    Dimensions="4 3"
+	    Format="XML">
+	  0 0 0
+	  1 0 0
+	  0 1 0
+	  0 0 1
+	</DataItem>
+      </Geometry>
+    </Grid>
+  </Domain>
+</Xdmf>
