@@ -7,7 +7,7 @@
 	  Dimensions="2"/>
       <Geometry>
 	<DataItem
-	    Dimensions="16 2"
+	    Dimensions="16 3"
 	    Format="XML">
 	  0 0 0
 	  0 0 1
