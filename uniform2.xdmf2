@@ -1,17 +1,8 @@
 <Xdmf>
   <Domain>
     <Grid>
-      <Geometry
-	  Type="XYZ">
-	<DataItem
-	    Dimensions="9">
-	  0 0 0
-	  1 0 0
-	  0 1 0
-	</DataItem>
-      </Geometry>
       <Topology
-	  Type="Polyvertex"
+	  TopologyType="Polyvertex"
 	  NumberOfElements="3">
 	<DataItem
 	    Dimensions="3">
@@ -20,6 +11,15 @@
 	  2
 	</DataItem>
       </Topology>
+      <Geometry
+	  GeometryType="XYZ">
+	<DataItem
+	    Dimensions="9">
+	  0 0 0
+	  1 0 0
+	  0 1 0
+	</DataItem>
+      </Geometry>
     </Grid>
   </Domain>
 </Xdmf>
