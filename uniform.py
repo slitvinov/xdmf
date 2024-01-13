@@ -15,7 +15,7 @@ attr = np.memmap(attr_path,
 it = np.nditer(attr, ["multi_index"], ["readwrite"])
 for x in it:
     i, j, k = it.multi_index
-    x[...] = i * j * k
+    x.itemset(i * j * k)
 with open(xdmf_path, "w") as f:
     f.write("""\
 <Xdmf
