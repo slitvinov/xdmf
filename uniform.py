@@ -4,9 +4,7 @@ import numpy as np
 xdmf_path = "a.xdmf2"
 attr_path = "a.attr.raw"
 
-nx = 10
-ny = 20
-nz = 30
+nx, ny, nz = 10, 20, 30
 attr = np.memmap(attr_path,
                  dtype=np.dtype("f"),
                  mode="w+",
@@ -40,7 +38,7 @@ with open(xdmf_path, "w") as f:
           1
         </DataItem>
       </Geometry>
-      <Attribute
+      <Attribute>
           Name="u">
         <DataItem
             Format="Binary"
