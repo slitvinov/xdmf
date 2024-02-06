@@ -4,28 +4,31 @@
     <Grid>
       <Topology
 	  TopologyType="Polygon"
-	  NodesPerElement="2"
 	  Dimensions="2">
 	<DataItem
-	    Dimensions="6 1"
+	    Dimensions="8 1"
 	    NumberType="Int"
 	    Format="XML">
-	  2
+	  3
 	  0
 	  1
 	  2
-	  2
 	  3
+	  3
+	  4
+	  5
 	</DataItem>
       </Topology>
       <Geometry>
 	<DataItem
-	    Dimensions="4 3"
+	    Dimensions="6 3"
 	    Format="XML">
 	  0 0 0
 	  1 0 0
-	  0 1 0
+	  1 1 0
 	  0 0 1
+	  1 0 1
+	  1 1 1
 	</DataItem>
       </Geometry>
     </Grid>
