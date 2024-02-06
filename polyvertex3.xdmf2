@@ -4,7 +4,7 @@
     <Grid>
       <Topology
 	  TopologyType="Polyvertex"
-	  NumberOfElements="3">
+	  NodesPerElement="3">
 	<DataItem
 	    Dimensions="3 1"
 	    Format="XML"
