@@ -1,5 +1,4 @@
 import sys
-import lxml
 import lxml.etree
 
 try:
