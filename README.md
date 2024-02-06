@@ -17,6 +17,5 @@ $ python valid.py Xdmf.dtd *.xdmf2
 Users Group Conference. IEEE, 2007.
 <https://apps.dtic.mil/sti/tr/pdf/ADP023792.pdf>
 2. <https://www.xdmf.org/index.php/XDMF_Model_and_Format>
-3. [VisIt User Manual]
-(https://visit-sphinx-github-user-manual.readthedocs.io/en/task-allen-vtk9_master_ospray/data_into_visit/XdmfFormat.html)
+3. [VisIt User Manual](https://visit-sphinx-github-user-manual.readthedocs.io/en/task-allen-vtk9_master_ospray/data_into_visit/XdmfFormat.html)
 3. <https://gitlab.kitware.com/xdmf/xdmf>
