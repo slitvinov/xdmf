@@ -6,22 +6,23 @@
 	  TopologyType="Polygon"
 	  Dimensions="2">
 	<DataItem
-	    Dimensions="8 1"
+	    Dimensions="9 1"
 	    NumberType="Int"
 	    Format="XML">
 	  3
 	  0
 	  1
 	  2
-	  3
+	  4
 	  3
 	  4
 	  5
+	  6
 	</DataItem>
       </Topology>
       <Geometry>
 	<DataItem
-	    Dimensions="6 3"
+	    Dimensions="7 3"
 	    Format="XML">
 	  0 0 0
 	  1 0 0
@@ -29,6 +30,7 @@
 	  0 0 1
 	  1 0 1
 	  1 1 1
+	  0 1 1
 	</DataItem>
       </Geometry>
     </Grid>
