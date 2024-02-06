@@ -1,20 +1,17 @@
 <h2>XDMF examples</h2>
-
 <h3>Validation</h3>
-
 <pre>
 $ python valid.py Xdmf.dtd *.xdmf2
 </pre>
 
 <h3>TopologyType<h3>
-
 [Polyvertex](polyvertex.xdmf2)<br>
 [Polyline](polyline.xdmf2)<br>
 [Polygon](polygon.xdmf2)<br>
+[Triangle](triangle.xdmf2)<br>
 [Hexahedron](hexahedron.xdmf2)<br>
 
 <h3>References</h3>
-
 1. Mark, E. "Enhancements to the extensible data model and format
 (xdmf)." 2007 DoD High Performance Computing Modernization Program
 Users Group Conference. IEEE, 2007.

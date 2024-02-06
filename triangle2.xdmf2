@@ -1,0 +1,34 @@
+<Xdmf
+    Version="2">
+  <DataItem
+      Dimensions="4 3"
+      Format="XML">
+    0 0 0
+    1 0 0
+    0 1 0
+    0 0 1
+  </DataItem>
+  <Domain>
+    <Grid>
+      <Topology
+	  TopologyType="Triangle"
+	  Dimensions="4">
+	<DataItem
+	    Dimensions="4 3"
+	    NumberType="Int"
+	    Format="XML">
+	  0 1 2
+	  0 1 3
+	  1 2 3
+	  2 0 3
+	</DataItem>
+      </Topology>
+      <Geometry>
+        <DataItem
+	    Reference="XML">
+	  /Xdmf/DataItem[1]
+        </DataItem>
+      </Geometry>
+    </Grid>
+  </Domain>
+</Xdmf>
