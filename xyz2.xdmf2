@@ -19,7 +19,7 @@
 	  0 0 0
 	  1 0 0
 	  0 1 0
-	  0 0 1	  
+	  0 0 1
 	</DataItem>
       </Geometry>
       <Attribute>
@@ -34,7 +34,7 @@
 	    2
 	    3
 	  </DataItem>
-	</DataItem>	
+	</DataItem>
       </Attribute>
     </Grid>
   </Domain>

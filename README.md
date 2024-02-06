@@ -8,7 +8,9 @@ $ python valid.py Xdmf.dtd *.xdmf2
 
 <h3>TopologyType<h3>
 
-[Polyvertex](polyvertex.xdmf2)
+[Polyvertex](polyvertex.xdmf2)<br>
+[Polyline](polyline.xdmf2)<br>
+[Polygon](polygon.xdmf2)<br>
 
 <h3>References</h3>
 

@@ -3,8 +3,9 @@
   <Domain>
     <Grid>
       <Topology
-	  TopologyType="Polyvertex"
-	  Dimensions="4">
+	  TopologyType="Polyline"
+	  NodesPerElement="2"
+	  Dimensions="2">
 	<DataItem
 	    Dimensions="4 1"
 	    NumberType="Int"

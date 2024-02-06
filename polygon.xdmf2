@@ -3,14 +3,17 @@
   <Domain>
     <Grid>
       <Topology
-	  TopologyType="Polyvertex"
-	  Dimensions="4">
+	  TopologyType="Polygon"
+	  NodesPerElement="2"
+	  Dimensions="2">
 	<DataItem
-	    Dimensions="4 1"
+	    Dimensions="6 1"
 	    NumberType="Int"
 	    Format="XML">
+	  2
 	  0
 	  1
+	  2
 	  2
 	  3
 	</DataItem>
