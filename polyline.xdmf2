@@ -7,13 +7,11 @@
 	  NodesPerElement="2"
 	  Dimensions="2">
 	<DataItem
-	    Dimensions="4"
+	    Dimensions="2 2"
 	    NumberType="Int"
 	    Format="XML">
-	  0
-	  1
-	  2
-	  3
+	  0 1
+	  2 3
 	</DataItem>
       </Topology>
       <Geometry>
