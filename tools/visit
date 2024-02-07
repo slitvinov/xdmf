@@ -1,0 +1,4 @@
+#!/bin/sh
+for i in *.xdmf2
+do ln "$i" "${i%.xdmf2}.xmf"
+done
