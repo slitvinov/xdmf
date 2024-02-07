@@ -6,20 +6,19 @@
 	  TopologyType="Mixed"
 	  Dimensions="2">
 	<DataItem
-	    Dimensions="11"
+	    Dimensions="9"
 	    NumberType="Int"
 	    Format="XML">
-	  3
-	  3
+	  4 <!-- Triangle !-->
 	  0
 	  1
 	  2
-	  9
-	  4
+	  5 <!-- Quadrilinear !-->
 	  3
 	  4
 	  5
 	  6
+	  7
 	</DataItem>
       </Topology>
       <Geometry>
