@@ -1,0 +1,19 @@
+<Xdmf
+    Version="2">
+  <Domain>
+    <Grid>
+      <Topology
+	  TopologyType="Edge_3"
+	  Dimensions="1"/>
+      <Geometry>
+	<DataItem
+	    Dimensions="3 3"
+	    Format="XML">
+	  0 0 0
+	  2 4 2
+	  1 1 1
+	</DataItem>
+      </Geometry>
+    </Grid>
+  </Domain>
+</Xdmf>
