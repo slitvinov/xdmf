@@ -5,11 +5,16 @@ $ python valid.py Xdmf.dtd *.xdmf2
 </pre>
 
 <h3>TopologyType<h3>
-[Polyvertex](polyvertex.xdmf2)<br>
-[Polyline](polyline.xdmf2)<br>
-[Polygon](polygon.xdmf2)<br>
-[Triangle](triangle.xdmf2)<br>
-[Hexahedron](hexahedron.xdmf2)<br>
+
+<h4>Linear<h4>
+[Polyvertex](polyvertex.xdmf2),
+[Polyline](polyline.xdmf2),
+[Polygon](polygon.xdmf2),
+[Triangle](triangle.xdmf2),
+[Hexahedron](hexahedron.xdmf2)
+
+<h4>Arbitrary<h4>
+[Mixed](mixed.xdmf2)
 
 <h3>References</h3>
 1. Mark, E. "Enhancements to the extensible data model and format

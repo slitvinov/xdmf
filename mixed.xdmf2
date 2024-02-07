@@ -1,0 +1,38 @@
+<Xdmf
+    Version="2">
+  <Domain>
+    <Grid>
+      <Topology
+	  TopologyType="Mixed"
+	  Dimensions="2">
+	<DataItem
+	    Dimensions="9 1"
+	    NumberType="Int"
+	    Format="XML">
+	  3
+	  0
+	  1
+	  2
+	  9
+	  3
+	  4
+	  5
+	  6
+	</DataItem>
+      </Topology>
+      <Geometry>
+	<DataItem
+	    Dimensions="7 3"
+	    Format="XML">
+	  0 0 0
+	  1 0 0
+	  0 1 0
+	  0 0 1
+	  1 0 1
+	  1 1 1
+	  0 1 1
+	</DataItem>
+      </Geometry>
+    </Grid>
+  </Domain>
+</Xdmf>
