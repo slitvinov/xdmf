@@ -6,14 +6,16 @@
 	  TopologyType="Mixed"
 	  Dimensions="2">
 	<DataItem
-	    Dimensions="9 1"
+	    Dimensions="11"
 	    NumberType="Int"
 	    Format="XML">
+	  3
 	  3
 	  0
 	  1
 	  2
 	  9
+	  4
 	  3
 	  4
 	  5

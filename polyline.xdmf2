@@ -7,7 +7,7 @@
 	  NodesPerElement="2"
 	  Dimensions="2">
 	<DataItem
-	    Dimensions="4 1"
+	    Dimensions="4"
 	    NumberType="Int"
 	    Format="XML">
 	  0
