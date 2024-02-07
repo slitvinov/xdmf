@@ -1,4 +1,24 @@
 #!/bin/sh
-for i in *.xdmf2
-do ln "$i" "${i%.xdmf2}.xmf"
+
+# Usage
+# tools/visit -nosplash -o hex.xdmf2
+
+AfterO=0
+for i
+do case $AfterO in
+     0) case $i in
+	    -o) AfterO=1 ;;
+	    *) AfterO=0 ;;
+	esac
+	;;
+     1) case $i in
+	    *.xdmf2) i=$i,Xdmf
+		     ;;
+	esac
+
+   esac
+   shift
+   set -- "$@" "$i"
 done
+
+exec visit "$@"
