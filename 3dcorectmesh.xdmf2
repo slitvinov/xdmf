@@ -1,0 +1,25 @@
+<Xdmf
+    Version="2">
+  <Domain>
+    <Grid>
+      <Topology
+	  TopologyType="3DCoRectMesh"
+	  Dimensions="2 3 4"/>
+      <Geometry
+	  GeometryType="ORIGIN_DXDYDZ">
+	<DataItem
+	    Dimensions="3">
+	  10
+	  20
+	  30
+	</DataItem>
+	<DataItem
+	    Dimensions="3">
+	  4
+	  3
+	  2
+	</DataItem>
+      </Geometry>
+    </Grid>
+  </Domain>
+</Xdmf>
