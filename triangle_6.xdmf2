@@ -1,0 +1,22 @@
+<Xdmf
+    Version="2">
+  <Domain>
+    <Grid>
+      <Topology
+	  TopologyType="Triangle_6"
+	  Dimensions="1"/>
+      <Geometry>
+	<DataItem
+	    Dimensions="6 3"
+	    Format="XML">
+	  0 0 0
+	  2 0 0
+	  0 0 0
+	  0 2 0
+	  0 0 0
+	  0 0 0
+	</DataItem>
+      </Geometry>
+    </Grid>
+  </Domain>
+</Xdmf>

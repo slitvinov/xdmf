@@ -19,7 +19,8 @@ Arbitrary:
 [Mixed](mixed.xdmf2)
 
 Quadratic:
-[Edge_3](edge_3.xdmf2)
+[Edge_3](edge_3.xdmf2),
+[Tri_3](triangle_6.xdmf2)
 
 Structured:
 [3DCoRectMesh](3dcorectmesh.xdmf2)
