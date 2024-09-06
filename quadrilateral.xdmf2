@@ -1,0 +1,35 @@
+<Xdmf
+    Version="2.0">
+  <Domain>
+    <Grid>
+      <Topology
+	  Dimensions="2"
+	  TopologyType="Quadrilateral"/>
+      <Geometry
+	  GeometryType="XY">
+	<DataItem
+	    Dimensions="8 2">
+	  0 0
+	  0 1
+	  1 1
+	  1 0
+
+	  1 1
+	  1 2
+	  2 2
+	  2 1
+	</DataItem>
+      </Geometry>
+      <Attribute
+          AttributeType="Vector"
+	  Center="Cell"
+	  Name="velocity">
+	<DataItem
+	    Dimensions="2 2">
+	    1 0
+	    0 1
+	</DataItem>
+      </Attribute>
+    </Grid>
+  </Domain>
+</Xdmf>

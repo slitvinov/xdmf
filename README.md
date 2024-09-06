@@ -14,6 +14,7 @@ Linear:
 [Polygon](polygon.xdmf2),
 [Triangle](triangle.xdmf2),
 [Hexahedron](hexahedron.xdmf2)
+[Quadrilateral](quadrilateral.xdmf2)
 
 Arbitrary:
 [Mixed](mixed.xdmf2)
