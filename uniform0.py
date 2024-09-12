@@ -6,14 +6,14 @@ attr_path = "a.attr.raw"
 
 nx, ny, nz = 10, 20, 30
 attr = np.memmap(attr_path,
-                 dtype=np.dtype("f"),
+                 dtype=np.uint8,
                  mode="w+",
                  shape=(nx, ny, nz),
                  order="F")
 it = np.nditer(attr, ["multi_index"], ["readwrite"])
 for x in it:
     i, j, k = it.multi_index
-    x.itemset(i * j * k)
+    x.itemset(i < j)
 with open(xdmf_path, "w") as f:
     f.write("""\
 <Xdmf
@@ -39,9 +39,11 @@ with open(xdmf_path, "w") as f:
         </DataItem>
       </Geometry>
       <Attribute
+          Center="Cell"
           Name="u">
         <DataItem
             Format="Binary"
+            NumberType="UChar"
             Dimensions="%ld %ld %ld">
           %s
         </DataItem>
@@ -49,4 +51,4 @@ with open(xdmf_path, "w") as f:
     </Grid>
   </Domain>
 </Xdmf>
-""" % (nz, ny, nx, nz, ny, nx, attr_path))
+""" % (nz + 1, ny + 1, nx + 1, nz, ny, nx, attr_path))
