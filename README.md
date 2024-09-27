@@ -26,8 +26,12 @@ Quadratic:
 Structured:
 [3DCoRectMesh](3dcorectmesh.xdmf2)
 
-[Use NPY format](npy.py), [read XDFM file using VTK library](vtk.py)
+[Use NPY format](npy.py), [read XDFM file using VTK library](vtk.py):
 
+<pre>
+$ python vtk.py 3dcorectmesh.xdmf2
+vtk.py: cell, points: 6, 24
+</pre>
 
 
 <h3>References</h3>
