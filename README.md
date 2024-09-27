@@ -31,6 +31,8 @@ Structured:
 <pre>
 $ python vtk.py 3dcorectmesh.xdmf2
 vtk.py: cell, points: 6, 24
+$ for i in *.xdmf2; do python vtk.py $i; done
+...
 </pre>
 
 
