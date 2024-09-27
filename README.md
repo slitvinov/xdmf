@@ -26,6 +26,8 @@ Quadratic:
 Structured:
 [3DCoRectMesh](3dcorectmesh.xdmf2)
 
+[Use NPY format](npy.py)
+
 <h3>References</h3>
 
 1. Mark, E. "Enhancements to the extensible data model and format (xdmf)." 2007 DoD High Performance Computing Modernization Program Users Group Conference. IEEE, 2007. <https://apps.dtic.mil/sti/tr/pdf/ADP023792.pdf>
