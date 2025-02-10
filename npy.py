@@ -1,5 +1,6 @@
 import random
 import numpy as np
+import sys
 
 xdmf_path = "a.xdmf2"
 attr_path = "a.attr.npy"
@@ -59,3 +60,7 @@ with open(xdmf_path, "w") as f:
   </Domain>
 </Xdmf>
 """ % (nz + 1, ny + 1, nx + 1, offset, nz, ny, nx, attr_path))
+sys.stderr.write(f"""\
+npy.py: {attr_path}
+npy.py: {xdmf_path}
+""")
