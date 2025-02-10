@@ -61,6 +61,7 @@ with open(xdmf_path, "w") as f:
 </Xdmf>
 """ % (nz + 1, ny + 1, nx + 1, offset, nz, ny, nx, attr_path))
 sys.stderr.write(f"""\
+npy.py: {offset}
 npy.py: {attr_path}
 npy.py: {xdmf_path}
 """)
