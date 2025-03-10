@@ -3,22 +3,22 @@
   <Domain>
     <Grid>
       <Topology
-          TopologyType="3DCoRectMesh"
-          Dimensions="2 2 2"/>
+	  TopologyType="3DCoRectMesh"
+	  Dimensions="2 2 2"/>
       <Geometry
-          GeometryType="ORIGIN_DXDYDZ">
-        <DataItem
-            Dimensions="3">
-          -6.25
-          -6.25
-          -5
-        </DataItem>
-        <DataItem
-            Dimensions="3">
-          12.5
-          12.5
-          12.5
-        </DataItem>
+	  GeometryType="ORIGIN_DXDYDZ">
+	<DataItem
+	    Dimensions="3">
+	  -6.25
+	  -6.25
+	  -5
+	</DataItem>
+	<DataItem
+	    Dimensions="3">
+	  12.5
+	  12.5
+	  12.5
+	</DataItem>
       </Geometry>
     </Grid>
   </Domain>
