@@ -32,8 +32,16 @@ $ python box.py
 box.py: box.xdmf2
 </pre>
 
-[Use NPY format](npy.py), [read XDFM file using VTK library](vtk.py):
+[Open NPY file format directly](npy.py):
+<pre>
+$ python npy.py
+npy.py: offset=128
+npy.py: attr_path='npy.attr.npy'
+npy.py: xdmf_path='npy.xdmf2'
+</pre>
+[npy Format](img/npy.png)
 
+[read XDFM file using VTK library](vtk.py):
 <pre>
 $ python -P vtk.py 3dcorectmesh.xdmf2
 vtk.py: cell, points: 6, 24

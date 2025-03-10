@@ -2,8 +2,8 @@ import random
 import numpy as np
 import sys
 
-xdmf_path = "a.xdmf2"
-attr_path = "a.attr.npy"
+xdmf_path = "npy.xdmf2"
+attr_path = "npy.attr.npy"
 
 nx, ny, nz = 10, 20, 30
 attr = np.empty((nx, ny, nz), order="F")
@@ -22,14 +22,14 @@ with open(attr_path, "rb") as f:
             break
 
 with open(xdmf_path, "w") as f:
-    f.write("""\
+    f.write(f'''\
 <Xdmf
     Version="2">
   <Domain>
     <Grid>
       <Topology
           TopologyType="3DCoRectMesh"
-          Dimensions="%ld %ld %ld"/>
+          Dimensions="{nz + 1} {ny + 1} {nx + 1}"/>
       <Geometry
           GeometryType="ORIGIN_DXDYDZ">
         <DataItem
@@ -51,17 +51,17 @@ with open(xdmf_path, "w") as f:
         <DataItem
             Format="Binary"
             Precision="8"
-            Seek="%d"
-            Dimensions="%ld %ld %ld">
-          %s
+            Seek="{offset}"
+            Dimensions="{nz} {ny} {nx}">
+          {attr_path}
         </DataItem>
       </Attribute>
     </Grid>
   </Domain>
 </Xdmf>
-""" % (nz + 1, ny + 1, nx + 1, offset, nz, ny, nx, attr_path))
-sys.stderr.write(f"""\
-npy.py: {offset}
-npy.py: {attr_path}
-npy.py: {xdmf_path}
-""")
+''')
+sys.stderr.write(f'''\
+npy.py: {offset=}
+npy.py: {attr_path=}
+npy.py: {xdmf_path=}
+''')
