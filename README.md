@@ -35,9 +35,9 @@ box.py: box.xdmf2
 [Use NPY format](npy.py), [read XDFM file using VTK library](vtk.py):
 
 <pre>
-$ python vtk.py 3dcorectmesh.xdmf2
+$ python -P vtk.py 3dcorectmesh.xdmf2
 vtk.py: cell, points: 6, 24
-$ for i in *.xdmf2; do python vtk.py $i; done
+$ for i in *.xdmf2; do python -P vtk.py $i; done
 ...
 </pre>
 
