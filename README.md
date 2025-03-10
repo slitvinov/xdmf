@@ -39,7 +39,7 @@ npy.py: offset=128
 npy.py: attr_path='npy.attr.npy'
 npy.py: xdmf_path='npy.xdmf2'
 </pre>
-[npy Format](img/npy.png)
+[NPY file volume rendering in paraview](npy.png)
 
 [read XDFM file using VTK library](vtk.py):
 <pre>
