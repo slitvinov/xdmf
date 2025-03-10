@@ -26,8 +26,11 @@ Quadratic:
 Structured:
 [3DCoRectMesh](3dcorectmesh.xdmf2)
 
-Others:
-[Coordinate Adjusted Box](box.xdmf2)
+Coordinate Adjusted Box:
+<pre>
+$ python box.py
+box.py: box.xdmf2
+</pre>
 
 [Use NPY format](npy.py), [read XDFM file using VTK library](vtk.py):
 
