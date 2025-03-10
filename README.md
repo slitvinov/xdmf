@@ -6,7 +6,7 @@
 $ python valid.py Xdmf.dtd *.xdmf2
 </pre>
 
-<h3>TopologyType<h3>
+<h3>TopologyType</h3>
 
 Linear:
 [Polyvertex](polyvertex.xdmf2),
