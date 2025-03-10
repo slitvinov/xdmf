@@ -18,6 +18,8 @@ view.CameraViewUp = 0.1, 1, 0
 view.UseColorPaletteForBackground = 0
 view.Background = 1.0, 1.0, 1.0
 layout = CreateLayout()
+layout.AssignView(0, view)
+layout.SetSize(*png_size)
 xdmf2 = XDMFReader(FileNames=[xdmf_path])
 xdmf2.CellArrayStatus = ['u']
 outline = Outline(Input=xdmf2)
