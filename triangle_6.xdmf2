@@ -9,14 +9,28 @@
 	<DataItem
 	    Dimensions="6 3"
 	    Format="XML">
-	  0 0 0
-	  2 0 0
-	  0 0 0
-	  0 2 0
-	  0 0 0
-	  0 0 0
+	  0.0 0.0 0.0
+	  1.0 0.0 0.0
+	  0.0 1.0 0.0
+	  0.5 0.0 0.0
+	  0.5 0.5 0.0
+	  0.0 0.5 0.0
 	</DataItem>
       </Geometry>
+      <Attribute
+	  Center="Node"
+	  Name="u">
+	<DataItem
+	    Format="XML"
+	    Dimensions="6">
+	    0
+	    1
+	    1
+	    0.5
+	    1
+	    0.5
+	</DataItem>
+      </Attribute>
     </Grid>
   </Domain>
 </Xdmf>
