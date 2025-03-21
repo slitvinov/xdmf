@@ -39,6 +39,6 @@ for i in range(xr.GetNumberOfOutputPorts()):
                 coordinates = [points.GetPoint(pid) for pid in ids]
                 print(f"Triangle {j}: Coordinates {coordinates}")
 ds = xr.GetOutputDataObject(0)
-print(f"vtk.py: cell, points: {ds.GetNumberOfCells()}, {ds.GetNumberOfPoints()}")
+print(
+    f"vtk.py: cell, points: {ds.GetNumberOfCells()}, {ds.GetNumberOfPoints()}")
 print(ds)
-

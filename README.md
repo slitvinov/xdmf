@@ -6,7 +6,7 @@
 $ python valid.py Xdmf.dtd *.xdmf2
 </pre>
 
-<h3>TopologyType<h3>
+<h3>TopologyType</h3>
 
 Linear:
 [Polyvertex](polyvertex.xdmf2),
@@ -26,12 +26,26 @@ Quadratic:
 Structured:
 [3DCoRectMesh](3dcorectmesh.xdmf2)
 
-[Use NPY format](npy.py), [read XDFM file using VTK library](vtk.py):
-
+Coordinate Adjusted Box:
 <pre>
-$ python vtk.py 3dcorectmesh.xdmf2
+$ python box.py
+box.py: box.xdmf2
+</pre>
+
+[Open NPY file format directly](npy.py):
+<pre>
+$ python npy.py
+npy.py: offset=128
+npy.py: attr_path='npy.attr.npy'
+npy.py: xdmf_path='npy.xdmf2'
+</pre>
+<p align="center" alt="NPY file volume rendering in paraview"><img src="npy.png"/></p>
+
+[read XDFM file using VTK library](vtk.py):
+<pre>
+$ python -P vtk.py 3dcorectmesh.xdmf2
 vtk.py: cell, points: 6, 24
-$ for i in *.xdmf2; do python vtk.py $i; done
+$ for i in *.xdmf2; do python -P vtk.py $i; done
 ...
 </pre>
 
