@@ -39,7 +39,7 @@ npy.py: offset=128
 npy.py: attr_path='npy.attr.npy'
 npy.py: xdmf_path='npy.xdmf2'
 </pre>
-<p align="center" alt="NPY file volume rendering in paraview"><img src="img/npy.png"/></p>
+<p align="center" alt="NPY file volume rendered in paraview"><img src="img/npy.png"/></p>
 
 [read XDFM file using VTK library](vtk.py):
 <pre>
@@ -49,6 +49,12 @@ $ for i in *.xdmf2; do python -P vtk.py $i; done
 ...
 </pre>
 
+Render in [ParaView](www.paraview.org):
+<pre>
+$ python icosahedron.py icosahedron.xdmf2
+$ pvbatch view.py icosahedron.xdmf2 icosahedron.png
+</pre>
+<p align="center" alt="Regular icosahedron rendered in paraview"><img src="img/icosahedron.png"/></p>
 
 <h3>References</h3>
 
