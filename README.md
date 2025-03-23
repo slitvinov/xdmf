@@ -1,5 +1,11 @@
 <h2>XDMF examples</h2>
 
+A collection of simple examples demonstrating the use of XDMF
+(eXtensible Data Model and Format) for scientific data description and
+visualization. Includes various mesh topologies, file formats, and
+Python scripts for reading, validating, and rendering XDMF files using
+tools like ParaView, NumPy, and VTK.
+
 <h3>Validation</h3>
 
 <pre>
