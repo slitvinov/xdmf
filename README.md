@@ -62,7 +62,7 @@ $ pvbatch view.py icosahedron.xdmf2 icosahedron.png
 </pre>
 <p align="center" alt="Regular icosahedron rendered in paraview"><img src="img/icosahedron.png"/></p>
 
-Generate particle data in C:
+[Generate particle data in C](particle.c):
 <pre>
 $ cc particles.c -o particles
 $ ./particles > particles.xdmf2
