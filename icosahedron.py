@@ -1,7 +1,5 @@
-import math
 import sys
-
-phi = (1 + math.sqrt(5)) / 2
+phi = (1 + 5**(1/2)) / 2
 ver = [
     [-1, phi, 0],
     [1, phi, 0],
@@ -16,7 +14,6 @@ ver = [
     [-phi, 0, -1],
     [-phi, 0, 1],
 ]
-
 tri = [
     [0, 11, 5],
     [0, 5, 1],
@@ -39,11 +36,11 @@ tri = [
     [8, 6, 7],
     [9, 8, 1],
 ]
-
+y = [sum(ver[i][1] for i in t) for t in tri]
+y_str = '\n          '.join(f"{x:+.16e}" for x in y)
 ver_str = '\n          '.join(' '.join(f"{x:+.16e}" for x in row)
                               for row in ver)
 tri_str = '\n          '.join(' '.join(f"{x:2d}" for x in row) for row in tri)
-
 with open(sys.argv[1], "w") as file:
     file.write(f'''\
 <Xdmf
@@ -67,6 +64,14 @@ with open(sys.argv[1], "w") as file:
           {ver_str}
 	</DataItem>
       </Geometry>
+      <Attribute
+	  Center="Cell"
+	  Name="y">
+	<DataItem
+	    Dimensions="{len(tri)}">
+          {y_str}
+	</DataItem>
+      </Attribute>
     </Grid>
   </Domain>
 </Xdmf>

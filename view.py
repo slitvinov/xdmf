@@ -13,15 +13,14 @@ from paraview.simple import *
 size = 400, 300
 view = CreateView("RenderView")
 view.ViewSize = size
+view.OrientationAxesVisibility = 0
+view.CameraParallelProjection = 1
+view.Background = 1, 1, 1
 layout = CreateLayout()
 layout.AssignView(0, view)
 layout.SetSize(*view.ViewSize)
-view.EnableRayTracing = 1
-view.StereoType = 'Crystal Eyes'
-view.OrientationAxesVisibility = 0
 xdmf = XDMFReader(FileNames=[xdmf_path])
-view.CameraParallelProjection = 1
 disp = Show()
 disp.SetRepresentationType("Surface With Edges")
-Render()
+disp.ColorArrayName = ['CELLS', 'y']
 SaveScreenshot(png_path, view)
