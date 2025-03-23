@@ -1,5 +1,6 @@
 import sys
-phi = (1 + 5**(1/2)) / 2
+
+phi = (1 + 5**(1 / 2)) / 2
 ver = [
     [-1, phi, 0],
     [1, phi, 0],
@@ -68,7 +69,8 @@ with open(sys.argv[1], "w") as file:
 	  Center="Cell"
 	  Name="y">
 	<DataItem
-	    Dimensions="{len(tri)}">
+	    Dimensions="{len(tri)}"
+	    Format="XML">
           {y_str}
 	</DataItem>
       </Attribute>

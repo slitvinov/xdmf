@@ -19,8 +19,14 @@ view.Background = 1, 1, 1
 layout = CreateLayout()
 layout.AssignView(0, view)
 layout.SetSize(*view.ViewSize)
-xdmf = XDMFReader(FileNames=[xdmf_path])
+xdmf = OpenDataFile(xdmf_path)
 disp = Show()
-disp.SetRepresentationType("Surface With Edges")
-disp.ColorArrayName = ['CELLS', 'y']
+if xdmf.CellData.NumberOfArrays:
+    disp.SetRepresentationType("Surface With Edges")
+    ColorBy(disp, ('CELLS', 'y'))
+else:
+    disp.SetRepresentationType("Point Gaussian")
+    disp.GaussianRadius = 0.5
+    ColorBy(disp, ('POINTS', 'y'))
+Render()
 SaveScreenshot(png_path, view)

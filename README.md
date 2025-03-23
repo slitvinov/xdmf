@@ -62,6 +62,14 @@ $ pvbatch view.py icosahedron.xdmf2 icosahedron.png
 </pre>
 <p align="center" alt="Regular icosahedron rendered in paraview"><img src="img/icosahedron.png"/></p>
 
+Generate particle data in C:
+<pre>
+$ cc particles.c -o particles
+$ ./particles > particles.xdmf2
+$ pvbatch view.py particles.xdmf2 particles.png
+</pre>
+<p align="center" alt="Particle data rendered in paraview"><img src="img/particles.png"/></p>
+
 <h3>References</h3>
 
 1. Mark, E. "Enhancements to the extensible data model and format (xdmf)." 2007 DoD High Performance Computing Modernization Program Users Group Conference. IEEE, 2007. <https://apps.dtic.mil/sti/tr/pdf/ADP023792.pdf>
