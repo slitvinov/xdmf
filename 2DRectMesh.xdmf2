@@ -1,0 +1,23 @@
+<Xdmf
+    Version="2">
+  <Domain>
+    <Grid>
+      <Topology
+	  TopologyType="2DRectMesh"
+	  Dimensions="1 4 8"/>
+      <Geometry
+	  GeometryType="ORIGIN_DXDY">
+	<DataItem
+	    Dimensions="2">
+	  0
+	  0
+	</DataItem>
+	<DataItem
+	    Dimensions="2">
+	  1
+	  1
+	</DataItem>
+      </Geometry>
+    </Grid>
+  </Domain>
+</Xdmf>
