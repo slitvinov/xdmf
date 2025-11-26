@@ -3,23 +3,21 @@ import numpy as np
 import sys
 
 xdmf_path = "3DRectMesh.xdmf2"
-attr_path = "3DRectMesh.attr.npy"
+attr_path = "3DRectMesh.attr.raw"
+dimx_path = "3DRectMesh.x.raw"
+dimy_path = "3DRectMesh.y.raw"
+dimz_path = "3DRectMesh.z.raw"
 
 nx, ny, nz = 10, 20, 30
-attr = np.empty((nx, ny, nz), order="F")
+attr = np.memmap(attr_path,
+                 dtype=np.uint8,
+                 mode="w+",
+                 shape=(nx, ny, nz),
+                 order="F")
 it = np.nditer(attr, ["multi_index"], ["readwrite"])
 for x in it:
     i, j, k = it.multi_index
-    x.itemset(i + j + k)
-
-np.save(attr_path, attr.T)
-with open(attr_path, "rb") as f:
-    offset = 0
-    while True:
-        c = f.read(1)
-        offset += 1
-        if c == b'\n':
-            break
+    attr[i, j, k] = i + j + k
 
 with open(xdmf_path, "w") as f:
     f.write(f'''\
@@ -57,7 +55,6 @@ with open(xdmf_path, "w") as f:
         <DataItem
             Format="Binary"
             Precision="8"
-            Seek="{offset}"
             Dimensions="{nz} {ny} {nx}">
           {attr_path}
         </DataItem>
@@ -67,7 +64,6 @@ with open(xdmf_path, "w") as f:
 </Xdmf>
 ''')
 sys.stderr.write(f'''\
-npy.py: {offset=}
-npy.py: {attr_path=}
-npy.py: {xdmf_path=}
+n3DRectMesh.py: {attr_path=}
+n3DRectMesh.py: {xdmf_path=}
 ''')
