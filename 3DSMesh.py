@@ -19,9 +19,21 @@ it = np.nditer(attr, ["multi_index"], ["readwrite"])
 for x in it:
     i, j, k = it.multi_index
     attr[i, j, k] = i + j + k
-    point[0, i, j, k] = i
-    point[1, i, j, k] = j
-    point[2, i, j, k] = k
+# Add curvature to coordinates
+curvature_x = 0.1  # Adjust for more/less curvature
+curvature_y = 0.1
+curvature_z = 0.1
+for k in range(nz + 1):
+    for j in range(ny + 1):
+        for i in range(nx + 1):
+            # Normalized coordinates [0, 1]
+            u = i / nx if nx > 0 else 0
+            v = j / ny if ny > 0 else 0
+            w = k / nz if nz > 0 else 0
+            # Add curved distortion
+            point[0, i, j, k] = i + curvature_x * np.sin(2 * np.pi * v) * np.sin(2 * np.pi * w)
+            point[1, i, j, k] = j + curvature_y * np.sin(2 * np.pi * u) * np.sin(2 * np.pi * w)
+            point[2, i, j, k] = k + curvature_z * np.sin(2 * np.pi * u) * np.sin(2 * np.pi * v)
 with open(xdmf_path, "w") as f:
     f.write(f'''\
 <Xdmf
@@ -32,7 +44,7 @@ with open(xdmf_path, "w") as f:
           TopologyType="3DSMesh"
           Dimensions="{nz + 1} {ny + 1} {nx + 1}"/>
       <Geometry
-          Type="XYZ">
+          GeometryType="XYZ">
         <DataItem
             Format="Binary"
             Precision="{precision}"
