@@ -4,13 +4,13 @@ import sys
 
 xdmf_path = "3DRectMesh.xdmf2"
 attr_path = "3DRectMesh.attr.raw"
-dimx_path = "3DRectMesh.x.raw"
-dimy_path = "3DRectMesh.y.raw"
-dimz_path = "3DRectMesh.z.raw"
+sx_path = "3DRectMesh.x.raw"
+sy_path = "3DRectMesh.y.raw"
+sz_path = "3DRectMesh.z.raw"
 
 nx, ny, nz = 10, 20, 30
 attr = np.memmap(attr_path,
-                 dtype=np.uint8,
+                 dtype=np.dtype("<f8"),
                  mode="w+",
                  shape=(nx, ny, nz),
                  order="F")
@@ -18,6 +18,10 @@ it = np.nditer(attr, ["multi_index"], ["readwrite"])
 for x in it:
     i, j, k = it.multi_index
     attr[i, j, k] = i + j + k
+
+sx = np.memmap(sx_path, dtype=np.dtype("<f8"), mode="w+", shape=nx)
+sy = np.memmap(sx_path, dtype=np.dtype("<f8"), mode="w+", shape=ny)
+sz = np.memmap(sx_path, dtype=np.dtype("<f8"), mode="w+", shape=nz)
 
 with open(xdmf_path, "w") as f:
     f.write(f'''\
@@ -31,22 +35,22 @@ with open(xdmf_path, "w") as f:
       <Geometry
           GeometryType="ORIGIN_DXDYDZ">
         <DataItem
+            Format="Binary"
+            Precision="8"
             Dimensions="{nx + 1}">
-          0
-          0
-          0
+          {sx_path}
         </DataItem>
         <DataItem
+            Format="Binary"
+            Precision="8"
             Dimensions="{ny + 1}">
-          0
-          0
-          0
+          {sy_path}
         </DataItem>
         <DataItem
+            Format="Binary"
+            Precision="8"
             Dimensions="{nz + 1}">
-          0
-          0
-          0
+          {sz_path}
         </DataItem>
       </Geometry>
       <Attribute
@@ -64,6 +68,6 @@ with open(xdmf_path, "w") as f:
 </Xdmf>
 ''')
 sys.stderr.write(f'''\
-n3DRectMesh.py: {attr_path=}
-n3DRectMesh.py: {xdmf_path=}
+3DRectMesh.py: {attr_path=}
+3DRectMesh.py: {xdmf_path=}
 ''')
