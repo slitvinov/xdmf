@@ -32,7 +32,7 @@ Quadratic:
 Structured:
 [3DCoRectMesh](3dcorectmesh.xdmf2)
 
-Coordinate Adjusted Box:
+[Coordinate Adjusted Box](box.xdmf2):
 <pre>
 $ python box.py
 box.py: box.xdmf2
