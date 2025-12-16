@@ -47,7 +47,7 @@ npy.py: xdmf_path='npy.xdmf2'
 </pre>
 <p align="center" alt="NPY file volume rendered in paraview"><img src="img/npy.png"/></p>
 
-[read XDFM file using VTK library](vtk.py):
+[read XDMF file using VTK library](vtk.py):
 <pre>
 $ python -P vtk.py 3dcorectmesh.xdmf2
 vtk.py: cell, points: 6, 24
@@ -76,4 +76,4 @@ $ pvbatch view.py particles.xdmf2 particles.png
 2. <https://www.xdmf.org/index.php/XDMF_Model_and_Format>
 3. [VisIt User Manual](https://visit-sphinx-github-user-manual.readthedocs.io/en/task-allen-vtk9_master_ospray/data_into_visit/XdmfFormat.html)
 4. [vtkXdmfReader](https://vtk.org/doc/nightly/html/classvtkXdmfReader.html)
-3. <https://gitlab.kitware.com/xdmf/xdmf>
+5. <https://gitlab.kitware.com/xdmf/xdmf>
