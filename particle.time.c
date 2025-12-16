@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define NUM_TIMESTEPS 10
+#define NUM_TIMESTEPS 100
 #define ROTATION_ANGLE_INCREMENT_DEG 5.0f
 
 const char *BIN_FILE_NAME = "particles.raw";
