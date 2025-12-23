@@ -10,7 +10,6 @@ else:
 direction = 0, 0, -1
 if len(sys.argv) == 3:
     direction = tuple(map(float, sys.argv))
-import paraview
 from paraview.simple import *
 
 size = 400, 300
