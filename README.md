@@ -30,9 +30,11 @@ Quadratic:
 [Tri_3](triangle_6.xdmf2)
 
 Structured:
-[3DCoRectMesh](3dcorectmesh.xdmf2)
+[3DCoRectMesh](3dcorectmesh.xdmf2),
+[3DSMesh](3DSMesh.py)
+<p align="center" alt="3DSMesh.xdmf2 rendered in paraview"><img src="img/3dsmesh.png"/></p>
 
-[Coordinate Adjusted Box](box.xdmf2):
+Coordinate Adjusted Box:
 <pre>
 $ python box.py
 box.py: box.xdmf2
@@ -62,12 +64,10 @@ $ pvbatch view.py icosahedron.xdmf2 icosahedron.png
 </pre>
 <p align="center" alt="Regular icosahedron rendered in paraview"><img src="img/icosahedron.png"/></p>
 
-[Generate particle data in C](particles.c) (XML output) and [particle.bin.c](particle.bin.c) (binary output):
+[Generate particle data in C](particle.c):
 <pre>
 $ cc particles.c -o particles
 $ ./particles > particles.xdmf2
-$ gcc particle.bin.c -o particle.bin
-$ ./particle.bin > particle.bin.xdmf2
 $ pvbatch view.py particles.xdmf2 particles.png
 </pre>
 <p align="center" alt="Particle data rendered in paraview"><img src="img/particles.png"/></p>
@@ -76,6 +76,6 @@ $ pvbatch view.py particles.xdmf2 particles.png
 
 1. Mark, E. "Enhancements to the extensible data model and format (xdmf)." 2007 DoD High Performance Computing Modernization Program Users Group Conference. IEEE, 2007. <https://apps.dtic.mil/sti/tr/pdf/ADP023792.pdf>
 2. <https://www.xdmf.org/index.php/XDMF_Model_and_Format>
-3. [VisIt User Manual](https://visit-sphinx-github-user-manual.readthedocs.io/en/task-allen-vtk9_master_ospray/dat-into_visit/XdmfFormat.html)
+3. [VisIt User Manual](https://visit-sphinx-github-user-manual.readthedocs.io/en/task-allen-vtk9_master_ospray/data_into_visit/XdmfFormat.html)
 4. [vtkXdmfReader](https://vtk.org/doc/nightly/html/classvtkXdmfReader.html)
 5. <https://gitlab.kitware.com/xdmf/xdmf>

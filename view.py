@@ -7,15 +7,18 @@ if sys.argv:
 else:
     xdmf_path = "icosahedron.xdmf2"
     png_path = "icosahedron.png"
+direction = 0, 0, -1
+if len(sys.argv) == 3:
+    direction = tuple(map(float, sys.argv))
 import paraview
 from paraview.simple import *
 
 size = 400, 300
-view = CreateView("RenderView")
+LoadPalette('WhiteBackground')
+view = GetRenderView()
 view.ViewSize = size
 view.OrientationAxesVisibility = 0
 view.CameraParallelProjection = 1
-view.Background = 1, 1, 1
 layout = CreateLayout()
 layout.AssignView(0, view)
 layout.SetSize(*view.ViewSize)
@@ -28,5 +31,6 @@ else:
     disp.SetRepresentationType("Point Gaussian")
     disp.GaussianRadius = 0.5
     ColorBy(disp, ('POINTS', 'y'))
+ResetCameraToDirection(direction=direction)
 Render()
 SaveScreenshot(png_path, view)
